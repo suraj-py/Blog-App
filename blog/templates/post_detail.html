@@ -5,4 +5,10 @@
         <h1>{{ post.title }}</h1>
         <p>{{ post.body }}</p>
     </div>
+    <p class="edit_post">
+        <a href="{% url 'post_edit' post.pk %}">+ Edit post</a>
+    </p>
+    <p class="delete_post">
+        <a href="{% url 'post_delete' post.pk %}">+ Delete post</a>
+    </p>
 {% endblock content %}

@@ -24,6 +24,11 @@ header{
     height: 100px;
     background-color: lightblue;
     padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container{
@@ -33,12 +38,12 @@ header{
 
 .header__logo a{
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 /*home.html styling */
 .title{
-    color: red;
+    color: lawngreen;
 }
 
 .blogs{

@@ -12,6 +12,7 @@
 
     <header>
         <h1 class="header__logo"><a href="{% url 'home' %}">Django Blog App</a></h1>
+        <a href="{% url 'post_new' %}">New Blog Post</a>
     </header>
     <main class="container">
         {% block content %}
