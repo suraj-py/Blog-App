@@ -14,7 +14,15 @@
         <h1 class="header__logo"><a href="{% url 'home' %}">Django Blog App</a></h1>
         <a href="{% url 'post_new' %}">New Blog Post</a>
     </header>
+
     <main class="container">
+        {% if user.is_authenticated %}
+        <p style="text-transform: capitalize; color:red;">Hello {{ user.username }}</p>
+         <a href="{% url 'logout' %}">LOG OUT</a>
+        {% else %}
+            <p>You're not logged in.</p>
+            <a href="{% url 'login' %}">LOGIN IN</a>
+        {% endif %}
         {% block content %}
         {% endblock content %}
     </main>
